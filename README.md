@@ -1,3 +1,12 @@
+**SCRIPT 1**
+
+For this project, I worked with a script that scrapes the 5-day weather forecast from the National Weather Service website. The script extracts information from multiple elements listed under the same class name using the BeautifulSoup library. I downloaded the NWS_WeatherForecast.py file and opened it in Google Collab. I then edited the NWS_WeatherForecast.py script to take latitude and longitude values as inputs in decimal degrees and Convert the latitude and longitude values to strings to generate the URL for Chicago, IL. I passed this URL as an argument in the get() request. The returned forecast information did not preserve its spacing during the scraping process. Hence, I used the replace() and regex() function to fix any spacing issues with the output. I then converted the final output to uppercase using .upper() method.
+
+I referenced the section “string manipulation techniques” under the lab assignment on Clark Moodle titled “Lab 4” from the Python Programming class to create a multiline string with the replace() method. To create spaces between intended words using the regex() tool, I referenced geeksforgeeks.com under the link: https://www.geeksforgeeks.org/python-add-space-between-numbers-and-alphabets-in-string/. To uppercase the final output using the .upper() method, I referenced geeksforgeeks.com under the link: https://www.geeksforgeeks.org/python-string-upper/.
+
+A major error that I was encountering while creating the final output was that I was unable to use the split() method to remove the unwanted symbols from the final output. In future, I would like to fix this error so the final output comes out much cleaner than what I had originally intended. In the future, I would also like to condense the entire script for a rather efficient and compact coding experience. 
+
+
 **SCRIPT 2**
 
 For this project, I tried to combine two labs that were taught in the Python Programming class to create a script. I was taught in class to scrape an image from Wikipedia, but I Web scraped an image from another website for this project. I was taught to use the basic elements of creating a chat bot, but for this project I created a branched chat bot script that makes use of information from the web scraped image.
