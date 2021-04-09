@@ -1,34 +1,11 @@
-## Final Project: Script 1
-### Web-scraping Weather Forecast Information with Python
-In this lab, you will work with a script that scrapes the 5-day weather forecast from the National Weather Service website. The script extracts information from multiple elements listed under the same class name using the BeautifulSoup library. 
+**SCRIPT 2**
 
-- Download the `NWS_WeatherForecast.py` file and run it in your local IDE or open it, then copy/paste it into a code cell in a new Colab notebook.
+For this project, I tried to combine two labs that were taught in the Python Programming class to create a script. I was taught in class to scrape an image from Wikipedia, but I Web scraped an image from another website for this project. I was taught to use the basic elements of creating a chat bot, but for this project I created a branched chat bot script that makes use of information from the web scraped image.
 
-- Read the description and comments in the script to understand the purpose of the script
+In this script, an online image from medpagetoday.com that contains information about the 3 Covid-19 vaccines currently available in the U.S. is web scraped to be downloaded locally. Then, a chat bot function called “Covid-19 vaccine FAQs” will be created that will use the information from the downloaded image to provide vaccine related information to its users. This chatbot function takes a Covid-19 vaccine company name as an input (Pfizer, Moderna, Janssen), followed by the subcategories as an input (Vaccine name, MOA, Dosing schedule, Efficacy), to produce an output containing specific information within the subcategories of each individual Covid-19 vaccine company.
 
-- Run the script. You will see some packages being installed when you run it for the first time.
+The resources I used to create this script were the link to the webpage from where the image was scraped (url: https://www.medpagetoday.com/specialreports/exclusives/91489). To web scrape the image, I referenced the section “Scraping images” under the tutorial assignment on Clark Moodle titled “Web-scraping in Depth” from the Python Programming class.  To create the chat bot function, I referenced the section “Create your first chat bot” under the lab assignment on Clark Moodle titled “Data classification and chat bots” from the Python Programming class.  
 
-- The script returns the 5-day forecast for Worcester, MA (Lat: 42.2634, Lon: -71.8022) with the latitude and longitude information provided. Using the latitude and longitude values, it generates the following URL through string concatenation: https://forecast.weather.gov/MapClick.php?lat=42.2634&lon=-71.8022
+In the future, I would like to incorporate a dictionary within this project with multiple lists containing ‘key’: values features and do calculations with them, such as web scraping live text information about the doses available of a certain Covid-19 vaccine company at a vaccination site, and the number of people registered to get the vaccine at the site offering the Covid-19 vaccine of that company, in order to calculate how many doses of a certain Covid-19 vaccine company are still available at the particular vaccination site for people to be registered. I could code this information in the chat bot for users to make a better decision about the vaccine they would like to receive. I would also like to web scrape some text information in future regarding qualitative data about the Covid-19 vaccines.
 
-- Open this URL in a Firefox or Chrome browser. Locate the information that is being outputted in our script. Right click on this and select the Inspect Element option. This will launch the Inspector window that helps locate different elements on the page.
-
-- Notice that all forecast containers in this section are located in the `forecast-tombstone` class inside the `li` tag. In order to scrape multiple elements listed under the same class name, we utilize the `findAll()` function from BeautifulSoup. The tag and class names are required arguments for this function.
-
-### Edit the NWS_ WeatherForecast.py script to add the following functionality:
-1. Take latitude and longitude values as inputs in decimal degrees from user
-
-2.	Convert the latitude and longitude values to strings to generate the URL for the selected location. Pass this URL as an argument in the `get()` request.
-
-3.	The returned forecast information did not preserve its spacing during the scraping process. Using the `replace()` function, fix any spacing issues with the output
-
-4.	Convert the final output to uppercase
-
-Remember to update your file to include comments and documentation in your script to tell me what it’s doing!
-
-## Final Project: Script 2
-### Your Chosen Assignment
-For this script, you will complete the assignment that you have proposed, which involves creating a new script, completing an online tutorial, or modifying a previous exercise or lab. You'll need to save that file or notebook into this repo: be sure to include comments and documentation in your script to tell me what it’s doing!
-
-## Final Project: Documentation
-### Changing this README
-Your write-up will be here, on this README page. You will need to edit this page with your new text: you do **not** need to keep these instructions on your README! 
+A major error that I was encountering while creating the chat bot was that the input letters are Case sensitive. I figured it out after a couple failed attempts in trying to receive an output. I would like to fix this error while creating chat bots in future. 
